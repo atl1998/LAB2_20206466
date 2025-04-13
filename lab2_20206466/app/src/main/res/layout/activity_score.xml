@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".ScoreActivity">
+
+    <!-- Título superior centrado -->
+    <TextView
+        android:id="@+id/textViewTitulo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TeleQuiz"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Tema dinámico -->
+    <TextView
+        android:id="@+id/textViewTema"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aqui va el tema"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitulo2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+    <!-- Texto 'Puntaje Total:' -->
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Puntaje Total:"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/textViewTema"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+    <!-- Cuadro del puntaje final -->
+    <TextView
+        android:id="@+id/textViewPuntajeTotal"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:text="0"
+        android:textSize="48sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:background="#C8E6C9"
+        app:layout_constraintTop_toBottomOf="@id/textView4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Boton Anterior -->
+    <Button
+        android:id="@+id/buttonAnterior"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="anterior"
+        android:layout_marginEnd="24dp"
+
+        app:layout_constraintEnd_toStartOf="@id/buttonSiguiente"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <!-- Boton Siguiente -->
+    <Button
+        android:id="@+id/buttonSiguiente"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="siguiente"
+        android:layout_marginStart="24dp"
+
+        app:layout_constraintStart_toEndOf="@id/buttonAnterior"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:enabled="false"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
